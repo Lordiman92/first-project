@@ -1,0 +1,25 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+driver.get("https://lordiman92.github.io/first-project/")
+first_number = int(input("Első?"))
+print(first_number)
+sec_number = int(input("Második?"))
+print(sec_number)
+print(int(first_number)+int(sec_number))
+driver.find_element(By.XPATH, "/html/body/form/div/input[1]").send_keys(first_number)
+driver.find_element(By.XPATH, "/html/body/form/div/input[2]").send_keys(sec_number)
+driver.find_element(By.XPATH, "/html/body/form/div/input[3]").click()
+
+h1 = driver.find_element(By.XPATH, "//h1").text
+val = int(driver.find_element(By.CSS_SELECTOR, "#result-input").get_attribute("value"))
+print(h1)
+print(val)
+
+driver.save_screenshot("result.png")
+
+assert h1 == "Számológép"
+assert val == first_number+sec_number
+
+driver.close()
