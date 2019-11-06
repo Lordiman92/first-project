@@ -12,7 +12,6 @@ print(h1)
 
 assert h1 == "Számológép"
 
-driver.implicitly_wait(20)
 
 driver.close()
 
