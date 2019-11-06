@@ -1,11 +1,15 @@
 h1{
+font-size: 65px;
 color:red;
 border: 24px solid cyan;
-align: center;
+text-align: center;
 }
 
 p{
+font-size: 40px;
+font-style: italic;
 color:green;
 border: 24px solid magenta;
-align: right;
+text-align: center;
+
 }
