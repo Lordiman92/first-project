@@ -15,3 +15,9 @@ print("Agy" in "Agyagosszergény")
 print("agy" in "Agyagosszergény")
 print("agy" in "Agyagosszergény".lower())
 
+line = "ez;az"
+parts = line.split(";")
+print(parts)
+print(parts[0])
+print(parts[1])
+#print()
