@@ -78,5 +78,4 @@ def test_home_page():
 test_home_page()
 
 
-
 driver.quit()
